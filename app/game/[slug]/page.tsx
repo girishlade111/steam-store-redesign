@@ -20,6 +20,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Progress } from "@/components/ui/progress"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
+// Required for `output: "export"` (GitHub Pages static deploy).
+export function generateStaticParams() {
+  return [{ slug: "elden-ring" }]
+}
+
 export default function GameDetailPage() {
   // This would normally be fetched from an API based on the slug
   const game = {
